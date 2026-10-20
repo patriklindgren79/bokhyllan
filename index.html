@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bokhyllan – Interaktiv</title>
+</head>
+<body>
+
+  <div id="timer">Tid inne: 0 sekunder</div>
+
+  <header>
+    <h1>Min Bokhylla</h1>
+    <p>Lägg till böcker, markera som lästa och håll koll på din lista.</p>
+  </header>
+
+  <main>
+    <!-- Formulär för ny bok -->
+    <fieldset>
+      <legend>Lägg till en ny bok</legend>
+
+      <label for="title-input">Titel</label>
+      <input type="text" id="title-input" placeholder="T.ex. Sagan om ringen">
+      <p class="error" id="title-error">Titel får inte vara tom.</p>
+
+      <label for="author-input">Författare</label>
+      <input type="text" id="author-input" placeholder="T.ex. Tolkien">
+      <p class="error" id="author-error">Författare får inte vara tom.</p>
+
+      <label for="genre-input">Genre</label>
+      <input type="text" id="genre-input" placeholder="T.ex. Fantasy">
+      <p class="error" id="genre-error">Genre måste anges (minst 2 tecken).</p>
+
+      <label for="pages-input">Antal sidor</label>
+      <input type="number" id="pages-input" placeholder="T.ex. 350" min="1">
+      <p class="error" id="pages-error">Ange ett giltigt tal större än 0.</p>
+
+      <button id="add-book-btn">Lägg till bok</button>
+    </fieldset>
+
+    <!-- Meddelandeområdet -->
+    <div id="message-area"></div>
+
+    <!-- Boklistan -->
+    <section id="book-list">
+      <div class="book" data-author="Tolkien" data-read="false">
+        <div>
+          <strong class="book-title">Bilbo</strong> — <em>Tolkien</em>
+          <br><small>Fantasy · 310 sidor</small>
+        </div>
+        <button class="toggle-read-btn">Markera som läst</button>
+      </div>
+
+      <div class="book" data-author="Orwell" data-read="true">
+        <div>
+          <strong class="book-title">1984</strong> — <em>Orwell</em>
+          <br><small>Dystopia · 328 sidor</small>
+        </div>
+        <button class="toggle-read-btn">Markera som oläst</button>
+      </div>
+    </section>
+
+    <p id="status-msg">Inlästa böcker: 1 av 2</p>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

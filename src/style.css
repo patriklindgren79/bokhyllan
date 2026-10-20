@@ -1,0 +1,99 @@
+body {
+  font-family: sans-serif;
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
+.book {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.highlight {
+  background-color: #fff3cd;
+}
+
+.read {
+  opacity: 0.5;
+}
+
+.error {
+  color: #c0392b;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+input.invalid {
+  border-color: #c0392b;
+  background-color: #fdf0ef;
+}
+
+fieldset {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+label {
+  display: block;
+  margin-top: 0.75rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+}
+
+#timer {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+#status-msg {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+#message-area {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  display: none;
+}
+
+#message-area.success {
+  background-color: #d4edda;
+  color: #155724;
+  display: block;
+}
+
+#message-area.warning {
+  background-color: #fff3cd;
+  color: #856404;
+  display: block;
+}
+
+#message-area.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  display: block;
+}
